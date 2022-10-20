@@ -1,0 +1,21 @@
+﻿body
+{
+}
+.img{
+    height:400px;
+    width:300px;
+    margin:50px
+
+}
+.victims {
+    height: 150px;
+    width: 100px;
+}
+.superLuigi{
+    height:600px;
+    width:400px;
+}
+.buttons{
+    width:50px;
+    margin-left:20px
+}
