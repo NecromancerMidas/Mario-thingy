@@ -9,12 +9,25 @@
 </head>
 <body>
     <div>
-        <div class="flex"> Select Character</div>
-        <img src="img/mario.png" class="victims" onclick="selectPlayer('mario')" />
-        <img src="img/yoshi.png" class="victims" onclick="selectPlayer('yoshi')" />
-        <img src="img/luigi.png" class="victims" onclick="selectPlayer('superLuigi')" />
-        <img src="img/peach.png" class="victims" onclick="selectPlayer('peach')" />
+        <div class="flex stylish"> Select Character</div>
+        <div class="innerbox">
+            <img src="img/mario.png" class="victims" onclick="selectPlayer('Mario')" />
+            <img src="img/yoshi.png" class="victims" onclick="selectPlayer('Yoshi')" />
+            <img src="img/Super Luigi.png" class="victims" onclick="selectPlayer('Super Luigi')" />
+            <img src="img/peach.png" class="victims" onclick="selectPlayer('Peach')" />
+        </div>
     </div>
-    <div></div>
+    <div class="flex">
+        <img src="img/bowser.png" class="img" />
+        <div id="bowserHp">100 HP</div>
+        <button class="button" id="bowser" onclick="attackOpponent(this)">Attack</button>
+        <img src="img/bwsmush.png" class="victims" onclick="regenBowser()" />
+    </div>
+    <div class="flex">
+<img id="selectedChar" src="img/mario.png" class="img" />
+        <div id="charHp">200 HP</div>
+        <button class="button" id="char" onclick="attackOpponent(this)">Attack Big Boy</button>
+        <img src="img/toad.png" class="victims" onclick="regenLife()" />
+    </div>
 </body>
 </html>

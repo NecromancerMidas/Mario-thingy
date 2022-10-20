@@ -1,34 +1,32 @@
 // JavaScript source code
 
 
-
-
 let bowserHp = 300; //hp section
 let charHp = 0;
-let player = 'mario';
+let player = 'Mario';
 
 function selectPlayer(playerName) {
     document.getElementById('bowser').innerHTML = "Attack " + playerName;
-    document.getElementById('selectedChar').src = playerName + '.png';
+    document.getElementById('selectedChar').src = 'img/' + playerName + '.png';
     player = playerName;
     regenLife();
 
 }
 function regenBowser() {
     bowserHp = 300;
-    document.getElementById("bowserHp").innerHTML = bowserHp + 'HP';
+    document.getElementById("bowserHp").innerHTML = bowserHp + 'HP'
 }
 function regenLife() {
-    if (player === 'mario') {
+    if (player === 'Mario') {
         charHp = 50;
     }
-    else if (player === 'peach') {
+    else if (player === 'Peach') {
         charHp = 40;
     }
-    else if (player === 'superLuigi') {
+    else if (player === 'Super Luigi') {
         charHp = 2000;
     }
-    else if (player === 'yoshi') {
+    else if (player === 'Yoshi') {
         charHp = 200;
     }
     else if (player === 'toad') {
@@ -37,36 +35,38 @@ function regenLife() {
     else {
         charHp = 200;
     }
-    document.getElementById("charHp").innerHTML = charHp+ 'HP'
+    document.getElementById("charHp").innerHTML = charHp + 'HP'
 }
 function attackOpponent(element) {
-    if (player === 'superLuigi') {
-        superLuigiAttacks();
-    }
-
-    else if (element.id === 'char') {
+    if (element.id === 'char') {
         charAttacks();
     }
-    else {
+    else{
         bowserAttacks(player);
     }
-    
 }
 function charAttacks() {
-    bowserHp -= 10;
-    document.getElementById("bowserHp").innerHTML = bowserHp + 'HP'
+    if (player === 'Mario') {
+        bowserHp -= 10;
+    }
+    else if (player === 'Peach') {
+        bowserHp -= 5;
+    }
+    else if (player === 'Yoshi') {
+        bowserHp -= 30;
+    }
+    else if (player === 'Super Luigi'){
+        bowserHp -= 300;
 }
-function superLuigiAttacks() {
-    bowserHp -= 300;
-    document.getElementById("bowserHp").innerHTML = bowserHp + 'HP'
-}
+     document.getElementById("bowserHp").innerHTML = bowserHp + 'HP';
+    }
+  
 function bowserAttacks(playerName) {
-    if (player === 'superLuigi') {
+    if (player === 'Super Luigi') {
         charHp -= 1;
-        document.getElementById("charHp").innerHTML = charHp + 'HP'
     }
-    else bowserAttack(playerName) {
+    else {
         charHp -= 20;
-        document.getElementById("charHp").innerHTML = charHp + 'HP'
     }
+    document.getElementById("charHp").innerHTML = charHp + 'HP';
 }
