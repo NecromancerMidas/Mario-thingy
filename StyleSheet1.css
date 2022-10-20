@@ -38,3 +38,28 @@ div.innerbox {
     width: 400px;
     border: 3px solid grey;
 }
+button.buttonofdoom {
+    margin-left: 700px;
+    height: 400px;
+    width: 400px;
+    margin-bottom: 1000px;
+    font-size:45px;
+    border:solid red 10px;
+    animation-name:DONOTCLICKFFS;
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+    animation-delay:0;
+}
+@keyframes DONOTCLICKFFS{
+    0%  {border:solid red 10px;}
+    10% {border: solid black 15px;}
+    20% {border: solid green 20px;}
+    30% {border: solid pink 25px;}
+    40% {border: solid yellow 20px;}
+    50% {border: solid blue 15px;}
+    60% {border: solid red 10px;}
+    70% {border: solid orange 15px;}
+    80% {border: solid white 20px;}
+    90% {border: solid purple 15px;}
+    100%{border: solid cyan 10px;}
+}

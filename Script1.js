@@ -70,3 +70,9 @@ function bowserAttacks(playerName) {
     }
     document.getElementById("charHp").innerHTML = charHp + 'HP';
 }
+function buttonOfDoom() {
+    var link = document.createElement("a")
+    link.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    link.target = "_blank"
+    link.click()
+}
