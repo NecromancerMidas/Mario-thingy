@@ -39,10 +39,8 @@ div.innerbox {
     border: 3px solid grey;
 }
 button.buttonofdoom {
-    margin-left: 700px;
     height: 400px;
     width: 400px;
-    margin-bottom: 1000px;
     font-size:45px;
     border:solid red 10px;
     animation-name:DONOTCLICKFFS;
@@ -62,4 +60,8 @@ button.buttonofdoom {
     80% {border: solid white 20px;}
     90% {border: solid purple 15px;}
     100%{border: solid cyan 10px;}
+}
+div.button{
+    display:flex;
+    margin-bottom:40px;
 }
