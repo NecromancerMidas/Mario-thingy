@@ -65,3 +65,11 @@ div.button{
     display:flex;
     margin-bottom:40px;
 }
+@keyframes bowserstrikes{
+   50%{}
+}
+p.imgbowser{
+    height:315px;
+    width:314px;
+    background: url('img/bowsersprite.png') 0px 0px;
+}

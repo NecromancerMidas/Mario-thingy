@@ -67,6 +67,7 @@ function bowserAttacks(playerName) {
     }
     else {
         charHp -= 20;
+        bowsertrikes();
     }
     document.getElementById("charHp").innerHTML = charHp + 'HP';
 }
@@ -75,4 +76,17 @@ function buttonOfDoom() {
     link.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     link.target = "_blank"
     link.click()
+}
+function bowsertrikes() {
+
+    document.getElementById("bowserimg").style.backgroundPosition = '315px 0px';
+    timeoutBowserUnStrikes();
+}
+let timeout;
+function timeoutBowserUnStrikes() {
+    timeout = setTimeout(bowserUnStrikes, 500);
+}
+function bowserUnStrikes() {
+    document.getElementById("bowserimg").style.backgroundPosition = '0px 0px';
+    
 }
