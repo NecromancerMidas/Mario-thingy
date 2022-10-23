@@ -68,6 +68,8 @@ function bowserAttacks(playerName) {
     else {
         charHp -= 20;
         bowsertrikes();
+        bowserfiresound();
+
     }
     document.getElementById("charHp").innerHTML = charHp + 'HP';
 }
@@ -89,4 +91,11 @@ function timeoutBowserUnStrikes() {
 function bowserUnStrikes() {
     document.getElementById("bowserimg").style.backgroundPosition = '0px 0px';
     
+}
+
+function bowserfiresound() {
+    var audio = new Audio("audio/bowserfire.mp4");
+    audio.volume = 0.1;
+    audio.play();
+
 }
